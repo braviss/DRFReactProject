@@ -44,8 +44,13 @@ X_FRAME_OPTIONS = "DENY"
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost'])
 
-# Application definition
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
 
+# Application definition
 INSTALLED_APPS = [
     'modeltranslation',
     'django.contrib.admin',
